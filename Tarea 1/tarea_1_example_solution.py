@@ -39,7 +39,10 @@ def encontrar_extremos(lista_numeros):
         return -600, None, None
 
     for numero in lista_numeros:
-        if (not isinstance(numero, int)) and (not isinstance(numero, float)):
+        if isinstance(numero, bool):
+            return -700, None, None
+
+        if (not isinstance(numero, float)) and (not isinstance(numero, int)):
             return -700, None, None
 
     if lista_numeros == []:
@@ -52,3 +55,5 @@ def encontrar_extremos(lista_numeros):
     numero_minimo = min(lista_numeros)
 
     return 0, numero_minimo, numero_maximo
+
+# pytest tarea_1_testing.py
