@@ -8,7 +8,7 @@ def filtrar_vocales(cadena, bandera):
     # se defina una lista de vocales
     vocales = ['a', 'e', 'i', 'o', 'u']
 
-    #se define el abcedario
+    # se define el abcedario
     abecedario = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
                   'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
                   'x', 'y', 'z']
@@ -52,7 +52,7 @@ def filtrar_vocales(cadena, bandera):
 def encontrar_extremos(lista_numeros):
     """"
     :param lista_numeros: list
-    :return: estado: int, numero_minimo: int o float, numero_maximo: int o float
+    :return: estado: int, numero_minimo: int o float,numero_maximo: int o float
     """
 
     # se revisa que la variable lista_numeros si sea de tipo list
