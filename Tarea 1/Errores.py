@@ -1,4 +1,3 @@
-import os, sys
-
-def suma_incorrecta( a,b ):
-    return a+b
+def suma_incorrecta(a, b):
+    """Suma dos números siguiendo el estándar PEP 8."""
+    return a + b
