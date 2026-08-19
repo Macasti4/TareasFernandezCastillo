@@ -1,8 +1,10 @@
 def filtrar_vocales(cadena, bandera):
-    vocales = ['a','e','i','o','u']
-    abecedario  = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    vocales = ['a', 'e', 'i', 'o', 'u']
+    abecedario = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+                  'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
+                  'x', 'y', 'z']
 
-    if type(cadena) != str:
+    if not isinstance(cadena, str):
         return -100, None
 
     for letra in cadena:
@@ -15,7 +17,7 @@ def filtrar_vocales(cadena, bandera):
     if len(cadena) > 30:
         return -400, None
 
-    if type(bandera) != bool:
+    if not isinstance(bandera, bool):
         return -500, None
 
     cadena_final = ''
@@ -30,13 +32,14 @@ def filtrar_vocales(cadena, bandera):
 
     return 0, cadena_final
 
+
 def encontrar_extremos(lista_numeros):
 
-    if type(lista_numeros) != list:
+    if not isinstance(lista_numeros, list):
         return -600, None, None
 
     for numero in lista_numeros:
-        if (type(numero) != int) and (type(numero) != float):
+        if (not isinstance(numero, int)) and (not isinstance(numero, float)):
             return -700, None, None
 
     if lista_numeros == []:
@@ -49,5 +52,3 @@ def encontrar_extremos(lista_numeros):
     numero_minimo = min(lista_numeros)
 
     return 0, numero_minimo, numero_maximo
-
-encontrar_extremos([5, 2, 8, 1, 9, 3])
